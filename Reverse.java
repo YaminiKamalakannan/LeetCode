@@ -1,16 +1,11 @@
 import java.util.Scanner;
-class Reverse {
-	
-public  static  int reverse(int x) {
-	
-      Integer temp=x, rev=0,rem=0;
-     
-      
-    
+class Reverse {	
+public  static  int reverse(int x) {	
+      Integer temp=x, rev=0,rem=0;    
       while(temp!=0){
             rem=temp%10;
-			temp=temp/10;			
-	        if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && rem > 7)) return 0;
+	    temp=temp/10;			
+	    if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && rem > 7)) return 0;
             if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && rem < -8)) return 0;			
             rev= rev*10+rem;            
         }		
@@ -19,12 +14,10 @@ public  static  int reverse(int x) {
 public static void main(String[] agrs){
 	Scanner scan=new Scanner(System.in);
 	int x=scan.nextInt();
-	System.out.print(reverse(x));
-	
+	System.out.print(reverse(x));	
+}	
 }
-	
-}
-/*
+/* QUESTION
 Given a 32-bit signed integer, reverse digits of an integer.
 
 Example 1:
